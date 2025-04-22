@@ -25,6 +25,9 @@ boolean upkey, downkey,rightkey,leftkey;
 //game object
 spaceship player1;
 
+//bullet
+ArrayList<bullet> bullets;
+
 
 void setup(){
 size(1920,1080);
@@ -37,6 +40,8 @@ player1 = new spaceship();
 //button
   myButton = new button[1];
 
+//bullet
+bullets = new ArrayList();
 }
 
 

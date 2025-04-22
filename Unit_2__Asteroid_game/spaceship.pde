@@ -56,7 +56,16 @@ if(upkey) vel.add(dir);
 
 if (leftkey) dir.rotate(-radians(3));
 if (rightkey) dir.rotate(radians(3));
+
+//wrap around 
+if(loc.x <0) loc.x = width;
+if(loc.x > width) loc.x = 0;
+if(loc.y < 0 ) loc.y = height;
+if(loc.y > height) loc.y = 0;
 }  
+
+
+
 
 void shoot(){
 
