@@ -17,6 +17,8 @@ if (keyCode == UP) upkey = true;
 if (keyCode == DOWN) downkey = true;
 if (keyCode == RIGHT) rightkey = true;
 if (keyCode == LEFT) leftkey = true;
+if (key == 'm' || key == 'M') mkey = true;
+//if (key == BACKSPACE) spacekey = true;
 
 //if (keyCode == 'W') upkey = true;
 //if (keyCode == 'S') downkey = true;
@@ -29,6 +31,9 @@ if (keyCode == UP) upkey = false;
 if (keyCode == DOWN) downkey = false;
 if (keyCode == RIGHT) rightkey = false;
 if (keyCode == LEFT) leftkey = false;
+//if (keyCode == DOWN) downkey = false;
+if (key == 'm' || key == 'M') mkey = false;
+//if (keyCode == BACKSPACE) spacekey = false;
 
 //if (keyCode == 'W') upkey = false;
 //if (keyCode == 'S') downkey = false;

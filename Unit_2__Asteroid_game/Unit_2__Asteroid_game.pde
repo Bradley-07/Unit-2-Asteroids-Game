@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 int mode; 
 final int intro = 0;
@@ -11,6 +12,7 @@ color black = #000000;
 color white = #FFFFFF;
 color navy = #003049;
 color green = #386641;
+color red = #c1121f;
 
 //button and mouse
 boolean mouseReleased;
@@ -20,28 +22,31 @@ button[] myButton;
 //asteroids
 
 //keyboard
-boolean upkey, downkey,rightkey,leftkey;
+boolean upkey, downkey,rightkey,leftkey,mkey;
 
 //game object
 spaceship player1;
 
 //bullet
-ArrayList<bullet> bullets;
+ArrayList<gameObject> objects;
 
 
 void setup(){
 size(1920,1080);
 background(black);
 
-mode = intro;
+mode = game;
+//objects
+objects = new ArrayList();
 
+//gameobjects
 player1 = new spaceship();
+objects.add(player1);
 
 //button
   myButton = new button[1];
 
-//bullet
-bullets = new ArrayList();
+
 }
 
 

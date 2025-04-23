@@ -1,11 +1,11 @@
 
 
 
-class spaceship{
+class spaceship extends gameObject{
 
 //instant variables
-PVector loc; //location
-PVector vel;  //velocity
+//PVector loc; //location
+//PVector vel;  //velocity
 PVector dir;  //direction
 
 
@@ -15,9 +15,8 @@ PVector dir;  //direction
 
 //constructor
 spaceship(){
-loc = new PVector (width/2, height/2);
-vel = new PVector (0,0);
-dir = new PVector (1,0);
+super(width/2, height/2,0,0);
+dir = new PVector (0.06,0);
 
 
 }
@@ -54,8 +53,8 @@ void move(){
  loc.add(vel);
 if(upkey) vel.add(dir);
 
-if (leftkey) dir.rotate(-radians(3));
-if (rightkey) dir.rotate(radians(3));
+if (leftkey) dir.rotate(-radians(2));
+if (rightkey) dir.rotate(radians(2));
 
 //wrap around 
 if(loc.x <0) loc.x = width;
@@ -68,7 +67,7 @@ if(loc.y > height) loc.y = 0;
 
 
 void shoot(){
-
+if(mkey) objects.add(new bullet());
 }
 
 

@@ -1,25 +1,26 @@
-class bullet {
 
-  PVector loc;
-  PVector velocity;
+
+class bullet extends gameObject{
+
+
   int lives;
 
   bullet() {
-    loc = new PVector(player1.loc.x, player1.loc.y);
-    velocity = player1.dir.copy();
-    velocity.setMag(10);
+    super(player1.loc.copy(), player1.dir.copy());
+    
+    vel.setMag(10);
   }
   
   
   void show(){
-fill(black);  
+fill(red);  
   stroke(white);
-  strokeWeight(2);
+  strokeWeight(0.3);
   circle(loc.x,loc.y,5);
   }
 
 void act(){
-loc.add(velocity);
+loc.add(vel);
 
 }
 
