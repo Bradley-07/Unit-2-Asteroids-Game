@@ -43,6 +43,10 @@ objects = new ArrayList();
 player1 = new spaceship();
 objects.add(player1);
 
+for(int i =0;i<4;i++){
+objects.add(new asteroids());
+}
+
 //button
   myButton = new button[1];
 
@@ -51,6 +55,8 @@ objects.add(player1);
 
 
 void draw(){
+
+  
 if (mode == intro) {
     intro();
   } else if (mode == game) {

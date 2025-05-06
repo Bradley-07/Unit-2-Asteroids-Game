@@ -10,7 +10,10 @@ while(i < objects.size()){
 gameObject currentObject = objects.get(i);
 currentObject.show();
 currentObject.act();
-  i++;
+ if(currentObject.lives == 0)
+ objects.remove(i);
+  else 
+    i++;
 }
 
 

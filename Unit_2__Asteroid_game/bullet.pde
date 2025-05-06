@@ -3,12 +3,13 @@
 class bullet extends gameObject{
 
 
-  int lives;
+  //int lives;
+  int timer;
 
   bullet() {
     super(player1.loc.copy(), player1.dir.copy());
-    
     vel.setMag(10);
+    timer = 1000;
   }
   
   
@@ -21,7 +22,9 @@ fill(red);
 
 void act(){
 loc.add(vel);
-
+wrapAround();
+timer --;
+if (timer ==0) lives = 0;
 }
 
 
