@@ -3,6 +3,8 @@ class gameObject{
 PVector loc;//location
 PVector vel; //velocity
 int lives;
+float d;
+
 
 gameObject(float lx, float ly, float vx, float vy){
 loc = new PVector(lx, ly);
@@ -39,6 +41,11 @@ if(loc.y < 0 ) loc.y = height;
 if(loc.y > height) loc.y = 0;
 
 }
+
+
+void update() {
+    loc.add(vel);
+  }
 
 
 }

@@ -20,10 +20,10 @@ if (keyCode == LEFT) leftkey = true;
 if (key == 'm' || key == 'M') mkey = true;
 //if (key == BACKSPACE) spacekey = true;
 
-//if (keyCode == 'W') upkey = true;
-//if (keyCode == 'S') downkey = true;
-//if (keyCode == 'D') rightkey = true;
-//if (keyCode == 'A') leftkey = true;
+if (keyCode == 'W' || key == 'w') upkey = true;
+if (keyCode == 'S' || key == 's') downkey = true;
+if (keyCode == 'D' || key == 'd') rightkey = true;
+if (keyCode == 'A' || key == 'a') leftkey = true;
 }
 
 void keyReleased(){
@@ -35,9 +35,9 @@ if (keyCode == LEFT) leftkey = false;
 if (key == 'm' || key == 'M') mkey = false;
 //if (keyCode == BACKSPACE) spacekey = false;
 
-//if (keyCode == 'W') upkey = false;
-//if (keyCode == 'S') downkey = false;
-//if (keyCode == 'D') rightkey = false;
-//if (keyCode == 'A') leftkey = false;
+if (keyCode == 'W' || key == 'w') upkey = false;
+if (keyCode == 'S' || key == 's') downkey = false;
+if (keyCode == 'D' || key == 'd') rightkey = false;
+if (keyCode == 'A' || key == 'a') leftkey = false;
 
 }

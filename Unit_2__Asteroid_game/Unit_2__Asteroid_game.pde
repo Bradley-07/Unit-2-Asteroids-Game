@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import gifAnimation.*;
 
 int mode; 
 final int intro = 0;
@@ -30,11 +31,17 @@ spaceship player1;
 //bullet
 ArrayList<gameObject> objects;
 
+PImage ship;
+PImage background;
+Gif ufo;
+
 
 void setup(){
 size(1920,1080);
 background(black);
 
+ ufo = new Gif(this, "ufo.gif");
+ ufo.play();
 mode = game;
 //objects
 objects = new ArrayList();
@@ -50,7 +57,10 @@ objects.add(new asteroids());
 //button
   myButton = new button[1];
 
+//spaceship
+ship = loadImage("ship2.png");
 
+background = loadImage("background2.jpg");
 }
 
 
