@@ -11,6 +11,7 @@ loc = new PVector(lx, ly);
 vel = new PVector (vx,vy);
 lives = 1;
 }
+
 gameObject(PVector l, PVector v){
 loc = l;
 vel = v;
