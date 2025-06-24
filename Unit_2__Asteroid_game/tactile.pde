@@ -1,8 +1,8 @@
 void win() {
   background(10, 5, 20); // Deep space color
   
-  player1.show();
-  player1.act(); 
+  //player1.show();
+  //player1.act(); 
   
   // Twinkling stars
   for (int i = 0; i < 300; i++) {
@@ -34,18 +34,41 @@ void win() {
   text("Final Score: " + finalScore, width / 2, height / 2 + 40);
   
   
-//   textSize(100);
-//  textAlign(CENTER, CENTER);
-//  fill(white);
+   textSize(100);
+  textAlign(CENTER, CENTER);
+  fill(white);
   
-//  text("Restart", width/2, height/2-200);
-//stroke(255);
-//myButton[1] = new button("RESTART", width/2,height/2+100,400,200,white,black);
-//myButton[1].show();
 
-//click();
-//if(myButton[1].clicked){
-//mode = intro;
-//rectMode(CORNER);
-//}
+int btnW = 300;
+int btnH = 80;
+int btnX = width / 2 - btnW / 2;
+int btnY = height - btnH - 40;
+
+// Hover check
+boolean isHovering = mouseX > btnX && mouseX < btnX + btnW &&
+                     mouseY > btnY && mouseY < btnY + btnH;
+
+// Draw button with hover effect
+if (isHovering) {
+  fill(#101540);  // Light grey on hover
+} else {
+  fill(255);  // Normal white
+}
+stroke(255);
+    strokeWeight(5);
+rect(btnX, btnY, btnW, btnH, 20);
+fill(0);
+textAlign(CENTER, CENTER);
+textSize(36);
+text("RESTART", width / 2, btnY + btnH / 2);
+
+// Handle tactile click on release
+if (mousePressed && isHovering) {
+  mode = intro;
+  
+}
+
+                         
+                         
+                         
 }

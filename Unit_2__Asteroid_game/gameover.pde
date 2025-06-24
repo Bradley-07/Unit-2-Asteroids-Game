@@ -4,6 +4,9 @@ button restartButton;
 
 
 void gameover() {
+  
+ 
+  
   int elapsed = frameCount - gameOverStartFrame;
 
   // Fade in over 2 seconds
@@ -31,21 +34,41 @@ void gameover() {
     textSize(48);
     text("Final Score: " + finalScore, width / 2, height / 2 + 70);
 
-  textSize(100);
-  textAlign(CENTER, CENTER);
-  fill(white);
-  
-//  text("Restart", width/2, height/2-200);
-//stroke(255);
-//myButton[2] = new button("RESTART", width/2,height/2+100,400,200,white,black);
-//myButton[2].show();
 
-//click();
-//if(myButton[2].clicked){
-//mode = intro;
-//rectMode(CORNER);
-//}
 
- }  
-    
+} if (elapsed > 120) {
+    // Button properties
+    int btnW = 300;
+    int btnH = 80;
+    int btnX = width/2 - btnW/2;
+    int btnY = height - btnH - 40;
+
+    // Check if mouse is hovering
+    boolean isHovering = mouseX > btnX && mouseX < btnX + btnW &&
+                         mouseY > btnY && mouseY < btnY + btnH;
+
+    // Draw hover effect
+    if (isHovering) {
+      fill(#401017);  // Light grey when hovering
+    } else {
+      fill(255);  // White when not
+    }
+
+    // Draw button
+    stroke(255);
+    strokeWeight(5);
+    rect(btnX, btnY, btnW, btnH, 20);
+    fill(0);
+    textAlign(CENTER, CENTER);
+    textSize(36);
+    text("RESTART", width/2, btnY + btnH/2);
+
+    // On mouse release *after* hover
+    if (mousePressed && isHovering) {
+      mode = intro;
+   
+    }
+  }
+
+
 }

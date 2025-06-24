@@ -62,7 +62,7 @@ background(black);
 //intro
  survivalFont = createFont("Arial Bold", 32); // Big easy-to-read font
 
-mode = intro;
+mode = win;
 //objects
 objects = new ArrayList();
 ufos = new ArrayList<ufo>();
